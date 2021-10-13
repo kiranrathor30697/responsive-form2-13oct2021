@@ -8,14 +8,126 @@
         <style>
             body{
                 background-color: #a22b56;
+                margin: 0px;
+                font-size: 1.2em;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .k_foembox{
+                width:539px;
+                height:471px;
+                background-color: #74203e;
+                margin:70px auto;
+                border: none;
+                color: #fff;
+                padding-left: 100px;
+                padding-top: 20px;
+            }
+            input{
+                width: 60%;
+                height: 30px;
+                border: none;
+                margin:5px auto;
+            }
+            label{
+                text-align: left !important;
+            }
+            .tbl{
+                margin:50px auto;
+            }
+            #submit{
+                width: 80%;
+                height: 40px;
+                font-size: 1.4em;
+                border-radius: 4px;
             }
         </style>
     </head>
     <body>
-        <form>
+        <form class="k_foembox">
             <div>
-                <label for="Fname">First Name :</label>
-                <input type="text" name="firstname" id="fname">
+                <table width=100% height=100% cellspacing=8>
+                    <tr>
+                        <td>
+                            <label for="name">Name : </label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Email : </label>
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pass">Password : </label>
+                        </td>
+                        <td>
+                            <input type="password" name="password" id="pass" placeholder="Your Password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="no">Phone Number : </label>
+                        </td>
+                        <td>
+                            <input type="number" name="number" id="no" placeholder="Your Number" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label foe="sex">Gender : </label>
+                        </td>
+                        <td> 
+                            <input type="radio" id="sex1" name="gender" value="Male" style="width:20px;height:20px;">
+                            <label for="sex1">Male</label>   
+                            <input type="radio" id="sex2" name="gender" value="Female" style="width:20px;height:20px;">
+                            <label for="sex2">Female</label>
+                            <input type="radio" id="sex3" name="gender" value="other" style="width:20px;height:20px;">
+                            <label for="sex3">Other</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lang">Language : </label>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="lang">Select Language</option>
+                                <option value="english">English</option>
+                                <option value="hindi">Hindi</option>
+                                <option value="marathi">Marathi</option>
+                                <option value="rajsthani">Rajsthani</option>
+                                <option value="gujrati">Gujrati</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="code">Zip Code : </label>
+                        </td>
+                        <td>
+                            <input type="text" name="code" id="code">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="describe">About</label>
+                        </td>
+                        <td>
+                            <textarea type="textarea" name="describe" id="describe" cols="24" rows="3" placeholder="Write About Yourself..."></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" id="submit" value="Register">
+                        </td>
+                    </tr>
+                </table>
             </div>
         </form>
     </body>
